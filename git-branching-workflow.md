@@ -1,0 +1,1 @@
+Stub. This document will skip tutorializing git, and focus on the philosophy behind a standard branch/PR model (release staging is another topic best handled elsewhere) and what advantages it has over a simpler push-to-master workflow
