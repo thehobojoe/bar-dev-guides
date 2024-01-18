@@ -24,7 +24,7 @@ But in addition to being a hosting service, Github also provides a whole suite o
 
 ### Forking
 If you don't have permissions on a github repository, in order to submit any code you will first need a fork. This can be done simply by pressing the fork button on the main page of any repository.
-![[fork.png]]
+![image of the fork button](images/fork.png)
 ### Cloning
 The very first operation you will have to do when trying to contribute to any existing repo is cloning it. This downloads everything in the repository to a folder, and also downloads a significant portion of the repositories commit history.
 
@@ -79,7 +79,7 @@ Again `HEAD` is an important git concept that will be expanded elsewhere, for no
 
 ### Pull Requests
 Now you have some code pushed up, and you want to get it merged into the main repository. With github, the way this is done a *pull request*. If you open the main BAR repo, any recent pushes you've made to your fork will show a prompt to open a pull request, like so:
-![[images/pr-prompt.png]]
+![image of PR prompt](images/pr-prompt.png)
 
 Fill out the details, and ask for someone to review! For basic contributions, this is all you need to know - but as you do more work you'll run into other challenges or want to perform more complex operations. We'll get to all of those in the upcoming sections.
 
