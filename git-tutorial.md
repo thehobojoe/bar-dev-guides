@@ -22,6 +22,15 @@ Github is most simply a hosting service for git repositories - git does not requ
 
 But in addition to being a hosting service, Github also provides a whole suite of tools on top of git to make things much easier. For our discussion here, the most important one of those features is *forking*. You can fork any repository that you have access to, and this creates a complete copy under your own github username, which you have full rights to do anything you want with.
 
+### Git setup
+Install git if you have not already. https://git-scm.com/
+
+Then set up your git credentials to match your github email and name (does not need to be your real name, of course)
+```console
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+```
+
 ### Forking
 If you don't have permissions on a github repository, in order to submit any code you will first need a fork. This can be done simply by pressing the fork button on the main page of any repository.
 
