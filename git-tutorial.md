@@ -39,9 +39,11 @@ If you don't have permissions on a github repository, in order to submit any cod
 The very first operation you will have to do when trying to contribute to any existing repo is cloning it. This downloads everything in the repository to a folder, and also downloads a significant portion of the repositories commit history.
 
 To clone, simply open a console in the desired directory and type
+
 `git clone https://github.com/beyond-all-reason/Beyond-All-Reason`
 
 Due to the size of the BAR repo, this may take a very long time. You can reduce this by telling git to only download the latest version, instead of also fetching extra history:
+
 `git clone https://github.com/beyond-all-reason/Beyond-All-Reason --depth=1`
 I recommend this approach, since having all that history on a fresh clone is likely unnecessary.
 
@@ -54,37 +56,57 @@ For git commands that produce large console output, the terminal will put you in
 So you've got a clone and you're ready to start working! Make any changes you please, with git just about anything you want to do is non-destructive. You could delete every file in the repo and it won't matter, you can simply roll back any single change you've made, whether committed or not.
 
 So lets say you want to do widget work, and you make edits to `gui_gridmenu.lua`. First, you can list any files that you've changed in the repository by the command:
+
 `git status`
+
 If you want to see list all the specific changes in these files, you can type:
+
 `git diff`
+
 This will probably be hard to read, I recommend a git GUI for this kind of thing.
 
 For now these files are *unstaged*, if you tried to commit right now, nothing will happen. You might for example have made experimental changes to several files, but only want to commit changes to some of them. Once you *stage* files, they will go into your next commit. To stage a single file, you just need to use `git add`, e.g.
+
 `git add luaui/widgets/gridmenu`
+
 This can also be done to entire folders
+
 `git add luaui/widgets/`
+
 Or if you want to stage *all* of your unstaged changes you can do:
+
 `git add .`
+
 or
+
 `git add --all`
+
 
 ### Branching
 When you clone or create any repository, you will be on the default branch, typically called `master` or `main`. Branching is an extremely powerful and central tool for git, but for now we're just going to describe a basic workflow, assuming that the user has created a fork of the BAR repo and doesn't have permissions to push to the main repo.
 
 So continuing the previous example, you've made some changes to gridmenu, and committing to `master` carries lots of extra complications and bad practices that we want to avoid, so you want to create a branch specific to your changes. The simplest way to do that is like this:
+
 `git checkout -b my-gridmenu-changes`
+
 The `checkout` command may appear confusing, and exactly what that is will get explained in more detail later, but for now what you need to know is that `checkout` switches you to a certain git pointer, like a branch or a specific commit. The `-b` flag tells the checkout command to make a new branch with the given name. So in totality, this command creates a branch with a name, and then puts your git environment onto that branch.
 
 ### Committing
 Commits are probably the most important concept in git. These are snapshots of the entire repo at a given point in time, and each one describes a set of specific changes. Now that you have a set of staged changes and have checked out a new branch, any commit you make will be applied to that branch. To commit your changes, all you have to do is:
+
 `git commit -m "my cool changes"`
+
 This creates a snapshot of all your staged changes, and for now it only exists on your machine. To get it into the github repository, you need to push it.
 
 ### Pushing
 Pushing is very simple. The simplest way to do it is:
+
 `git push origin my-gridmenu-changes`
+
 Here, `origin` is your *remote*, this is something we'll discuss in more detail later, but for now this would be the fork you created earlier, and you give it the branch name to tell it to push all commits that you have locally that are not present on that branch in the remote. A slight shorthand way to do the same thing is:
+
 `git push origin HEAD`
+
 Again `HEAD` is an important git concept that will be expanded elsewhere, for now all you need to know is that this will act as if you typed in the branch name.
 
 ### Pull Requests
