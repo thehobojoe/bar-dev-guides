@@ -45,6 +45,7 @@ To clone, simply open a console in the desired directory and type
 Due to the size of the BAR repo, this may take a very long time. You can reduce this by telling git to only download the latest version, instead of also fetching extra history:
 
 `git clone https://github.com/beyond-all-reason/Beyond-All-Reason --depth=1`
+
 I recommend this approach, since having all that history on a fresh clone is likely unnecessary.
 
 If you've forked the repository, instead of downloading the main repo, you will want to download your fork, so instead of `https://github.com/beyond-all-reason/Beyond-All-Reason`, it would be `https://github.com/your-username/Beyond-All-Reason`

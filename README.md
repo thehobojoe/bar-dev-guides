@@ -2,4 +2,6 @@ This repository is intended to provide several guides and guidelines for BAR dev
 
 ### [Git Tutorial](git-tutorial.md)
 
+### [Git quick reference](git-reference.md)
+
 ### [Git Branching Workflow](git-branching-workflow.md)
